@@ -3,7 +3,6 @@
 A UIViewController subclass for revealing a menu behind a front view controller (similar to the menu in apps like Facebook).
 
 ![](Images/SlideInMenu.png?raw=true)
-
 ##Features##
 
 * A Reveal view controller implemented using view controller containment.
@@ -23,24 +22,24 @@ API easier than a UINavigationController.
 
 To get started copy the following into your project:
 
-SlideInMenuViewController.m
-SlideInMenuViewController.h
+    SlideInMenuViewController.m
+    SlideInMenuViewController.h
 
 Then, in your project:
 
-Initialize an instance of a SlideInMenuViewController passing in a "rear" and a "front" view controllers.
+* Initialize an instance of a SlideInMenuViewController passing in a "rear" and a "front" view controllers.
 
-Use the SlideInMenuViewController instance as you would any view controller.
+* Use the SlideInMenuViewController instance as you would any view controller.
 
-Deploy as the application window rootViewController, or as a child of other containment controllers.
+* Deploy as the application window rootViewController, or as a child of other containment controllers.
 
-Get the panGestureRecognized and tapGestureRecognizer provided by the SWRevealViewController. You can leave them as they are for the default behavior or you can add them to a suitable view on your "front" view controller. For example add the panGestureRecognizer to a navigationBar on the viewDidLoad method of your front controller. This may look something like this:
+* Get the panGestureRecognized and tapGestureRecognizer provided by the SWRevealViewController. You can leave them as they are for the default behavior or you can add them to a suitable view on your "front" view controller. For example add the panGestureRecognizer to a navigationBar on the viewDidLoad method of your front controller. This may look something like this:
 
-_revealButtonItem.target = self.revealViewController;
-    _revealButtonItem.action = @selector(revealToggle:);
+        _revealButtonItem.target = self.revealViewController;
+        _revealButtonItem.action = @selector(revealToggle:);
     
-    // Set the gesture (swipe from the left edge to reveal the menu)
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+        // Set the gesture (swipe from the left edge to reveal the menu)
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
 At any time, you can reveal, conceal the "rear" or "right" views or replace any of the view controllers, programmatically or based on user actions, with or without animations enabled
 
@@ -48,22 +47,22 @@ At any time, you can reveal, conceal the "rear" or "right" views or replace any 
 
 Initializing a SWRevealViewController:
 
-- (id)initWithRearViewController:(UIViewController *)rearViewController frontViewController:(UIViewController *)frontViewController;
+        - (id)initWithRearViewController:(UIViewController *)rearViewController frontViewController:(UIViewController *)frontViewController;
 Setting a right view controller:
 
-@property (strong, nonatomic) UIViewController *rightViewController;
+        @property (strong, nonatomic) UIViewController *rightViewController;
 Animated setting of the front view controller:
 
-- (void)pushFrontViewController:(UIViewController *)frontViewController animated:(BOOL)animated;
+        - (void)pushFrontViewController:(UIViewController *)frontViewController animated:(BOOL)animated;
 Animating the position of the front view controller. Position can be: FrontViewPositionLeftSideMostRemoved, FrontViewPositionLeftSideMost, FrontViewPositionLeftSide, FrontViewPositionLeft, FrontViewPositionRight, FrontViewPositionRightMost or FrontViewPositionRightMostRemoved
 
-- (void)setFrontViewPosition:(FrontViewPosition)frontViewPosition animated:(BOOL)animated;
+        - (void)setFrontViewPosition:(FrontViewPosition)frontViewPosition animated:(BOOL)animated;
 Creating and obtaining a pan gesture recognizer:
 
-- (UIPanGestureRecognizer*)panGestureRecognizer;
+        - (UIPanGestureRecognizer*)panGestureRecognizer;
 Creating and obtaining a tap gesture recognizer:
 
-- (UITapGestureRecognizer*)tapGestureRecognizer;
+        - (UITapGestureRecognizer*)tapGestureRecognizer;
 Other methods are documented in the SWRevealViewController.h header file.
 
 ##Licence##
