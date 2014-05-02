@@ -2,6 +2,8 @@
 
 A UIViewController subclass for revealing a menu behind a front view controller (similar to the menu in apps like Facebook).
 
+![](Images/SlideInMenu.png?raw=true)
+
 ##Features##
 
 A Reveal view controller implemented using view controller containment.
