@@ -6,19 +6,19 @@ A UIViewController subclass for revealing a menu behind a front view controller 
 
 ##Features##
 
-A Reveal view controller implemented using view controller containment.
-Support for custom viewController transition animations through UIViewControllerAnimatedTransitioning protocol
+>A Reveal view controller implemented using view controller containment.
+>Support for custom viewController transition animations through UIViewControllerAnimatedTransitioning protocol
 API easier than a UINavigationController.
-Support for any combination of left/right rear controllers.
-Correct handling of appearance methods on its child controllers that you can rely on.
-Correct handling of rotations.
-Can be embedded as a child view controller of other controllers or deployed as the rootViewController.
-Plays nicely with any child view controllers or parent controllers.
-Can be deployed as a child of itself to create cascade-like, hierarchical interfaces.
-Seamless integration of pan gesture recognizer, behaving as smooth as silk.
-A category method on UIViewController, revealViewController, to get the parent SWRevealViewController of any child controller, similar to the UIViewController's property navigationController.
-Comprehensive set of delegate methods for getting full state of the controller and implementing your own code hooks for customizing behavior.
-Lightweight, clean, easy-to-read, self-documenting code that you will enjoy using in your projects.
+>Support for any combination of left/right rear controllers.
+>Correct handling of appearance methods on its child controllers that you can rely on.
+>Correct handling of rotations.
+>Can be embedded as a child view controller of other controllers or deployed as the rootViewController.
+>Plays nicely with any child view controllers or parent controllers.
+>Can be deployed as a child of itself to create cascade-like, hierarchical interfaces.
+>Seamless integration of pan gesture recognizer, behaving as smooth as silk.
+>A category method on UIViewController, revealViewController, to get the parent SWRevealViewController of any child controller, similar to the UIViewController's property navigationController.
+>Comprehensive set of delegate methods for getting full state of the controller and implementing your own code hooks for customizing behavior.
+>Lightweight, clean, easy-to-read, self-documenting code that you will enjoy using in your projects.
 
 ##Usage##
 
